@@ -1,0 +1,46 @@
+$fontColor: #222222;
+$fontDefault: normal normal normal 14px/100% 'Ubuntu-Regular', sans-serif;
+$fontDefaultLight: normal normal normal 14px/100% 'Ubuntu-Light', sans-serif;
+$fontDefaultSemiBold: normal normal normal 14px/100% 'Ubuntu-Semibold', sans-serif;
+$fontDefaultBold: normal  normal bold 14px/100% 'Ubuntu-Regular', sans-serif;
+$fontDefaultMedium: normal normal normal 14px/100% 'Ubuntu-Medium', sans-serif;
+$fontDefaultHeavy: normal normal normal 14px/100% 'Ubuntu-Heavy', sans-serif;
+
+
+$mainActionColor: #77C2DB;
+$mainActionColorHover: #7fcae3;
+$textColorMain: #333333;
+$textColorLighter: lighten($textColorMain,20%);
+$textColorLight: lighten($textColorMain,40%);
+
+$defaultRibbonWidth: 1366px;
+
+$headerBackgroundColor: #1A1A1A;
+$headerTextColor: #ffffff;
+
+$footerBackgroundColor: #333333;
+$footerTextColor: #ffffff;
+
+$headerDefaultHeight: 50px;
+
+$footerDefaultHeight: 50px;
+
+$navigationBackgroundColor: #333333;
+$navigationTextColor: #ffffff;
+
+$defaultBackgroundColor: #EDF1F6;
+
+$headerMinWidth: 930px;
+
+$defaultErrorColor: #c1272d;
+
+$rowStatusActive: #39B54A;
+$rowStatusLive: #ED6B75;
+$rowStatusHidden: #36C6D3;
+$rowStatusPaused: #659BE0;
+$rowStatusInactive: #ACB5C3;
+$rowStatusMaintenance: #F1C40F;
+
+$defaultOrangeColor: #f7931e;
+$defaultOrangeColorHover: #ea7706;
+

@@ -1,0 +1,178 @@
+.el-form-item {
+    font: $fontDefaultLight;
+    text-shadow: 1px 0px 1px #ffffff;
+    margin-bottom: 10px;
+    &__label {
+        display: block;
+        color: #333333;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 2px 0 10px;
+        transition: background .3s ease-in-out, border .3s ease-in-out;
+    }
+    &.with-hint {
+        .el-form-item__label {
+            display: inline-block;
+            float: none;
+            margin-top: 0px;
+        }
+    }
+}
+.input-hint {
+    &-tooltip {
+        max-width: 200px;
+    }
+    &-icon {
+      cursor: pointer;
+    }
+}
+.el-input {
+    margin: 0 0 10px 0;
+    &__inner {
+        vertical-align: top;
+        display: inline-block;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: $inputBorder;
+        color: #222222;
+        font-size: 14px;
+        border-radius: 3px;
+        letter-spacing: .1px;
+        outline: 0;
+        max-width: 100%;
+        padding: 0 8px;
+        width: 100%;
+        transition: background .3s ease-in-out, border .3s ease-in-out;
+        height: 30px;
+        line-height: 30px;
+        min-width: 30px;
+        &:focus,
+        &:hover {
+            background: #ffffff;
+        }
+    }
+    &.negative {
+        &__inner {
+            border-color: #98D9E3;
+            &:focus,
+            &:hover {
+                border-color: #5EA8B4;
+            }
+        }
+    }
+    &.edited {
+        .el-input__inner {
+            background: #FFFFAE;
+            &:focus, &:hover {
+                background: #FFFFAE;
+            }
+        }
+    }
+    .el-input__icon {
+        &.el-icon-search {
+            line-height: 30px;
+        }
+    }
+}
+.el-form {
+    padding: 10px 0;
+    .inline-field-group {
+        display: inline-block;
+        &.invalid {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                height: 6px;
+                top: -5px;
+                left: 0;
+                width: 100%;
+                display: block;
+                background: #ffb8b1;
+            }
+            background: #ffb8b1;
+        }
+    }
+}
+.form-negative {
+    .el-input {
+        &__inner {
+            border-color: #98D9E3;
+            &:focus,
+            &:hover {
+                border-color: #5EA8B4;
+            }
+        }
+    }
+}
+.input-label {
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.form-vertical {
+    .input-label {
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 0px;
+    }
+}
+.el-textarea {
+    margin: 0 0 10px 0;
+    &__inner {
+        vertical-align: top;
+        display: inline-block;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: $inputBorder;
+        color: #222222;
+        font-size: 14px;
+        border-radius: 3px;
+        letter-spacing: .1px;
+        outline: 0;
+        max-width: 100%;
+        padding: 0 8px;
+        width: 100%;
+        transition: background .3s ease-in-out, border .3s ease-in-out;
+        min-width: 30px;
+        overflow: auto;
+        &:focus,
+        &:hover {
+            background: #ffffff;
+        }
+    }
+}
+.invalid-message {
+    color: rgb(200,0,0);
+    font-size: 12px;
+    line-height: 12px;
+    text-shadow: none;
+}
+.invalid,.el-input.invalid {
+    .el-input__inner,
+    .el-textarea__inner {
+        border-color: rgb(200,0,0);
+    }
+}
+.el-date-editor {
+    vertical-align: top;
+    .el-input__icon {
+        line-height: 100%;
+        &.el-icon-search {
+            line-height: 30px;
+        }
+    }
+}
+.el-input-number {
+    line-height: 30px;
+    height: 30px;
+    &.is-controls-right {
+        .el-input-number__decrease, .el-input-number__increase {
+            line-height: 15px;
+        }
+    }
+}

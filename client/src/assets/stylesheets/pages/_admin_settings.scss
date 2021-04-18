@@ -1,0 +1,77 @@
+.page-admin-common-settings {
+    h2 {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px 0;
+        color: gray;
+    }
+    h3 {
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        margin: 10px 0;
+        color: gray;
+    }
+    .el-form {
+        width: 600px;
+    }
+    .el-form--inline {
+        .el-form-item {
+            @media (max-width:800px) {
+                width: 100%;
+            }
+        }
+        .el-form-item__label {
+            text-align: left;
+            width: 400px;
+            @media (max-width:800px) {
+                width: 70%;
+            }
+        }
+        .el-input-number {
+            vertical-align: top;
+            width: 100px;
+            &.is-changed {
+                .el-input__inner {
+                    background: #FFFFAE;
+                }
+            }
+        }
+        .ddl-timezone {
+            width: 250px;
+            &.is-changed {
+                .el-input__inner {
+                    background: #FFFFAE;
+                }
+            }
+        }
+        .input-time {
+            width: 100px;
+            .el-input__inner {
+                padding-right: 8px;
+                padding-left: 30px;
+            }
+        }
+    }
+    .common-timezone {
+        .el-form-item__label {
+            text-align: left;
+            width: 250px;
+            @media (max-width:800px) {
+                width: 70%;
+            }
+        }
+    }
+    .page-calendar-field {
+        margin: 10px 0;
+        .label {
+            width: 180px;
+            padding-top: 5px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .input-time {
+            width: 100px;
+        }
+    }
+}

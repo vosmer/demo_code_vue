@@ -1,0 +1,35 @@
+.authorization-form {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+    .version {
+        margin-top: 10px;
+    }
+    hr {
+        margin: 20px 0 0 0;
+    }
+    h1 {
+        display: block;
+        color: #333333;
+        font: $fontDefault;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 2px 0 0;
+        transition: background .3s ease-in-out, border .3s ease-in-out;
+        text-shadow: 1px 0px 1px #ffffff;
+    }
+    .el-form {
+        .form-title {
+            margin: 10px 0 20px 0;
+        }
+        .submit {
+            width: 100%;
+            box-sizing: border-box;
+            height: 44px;
+        }
+    }
+}

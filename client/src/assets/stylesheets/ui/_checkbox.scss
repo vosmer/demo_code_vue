@@ -1,0 +1,29 @@
+.el-checkbox__input {
+    position: relative;
+    .el-checkbox__original {
+        //FIX for jumping checkbox in FF while placed in el-table
+        top: 0;
+        left: 0;
+        position: absolute;
+        //end FIX
+    }
+    &.is-checked, &.is-indeterminate {
+        .el-checkbox__inner {
+            background-color: #77C2DB;
+            border-color: #77C2DB;
+        }
+        &+.el-checkbox__label {
+            color: #333333;
+        }
+    }
+}
+.el-checkbox__label {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+}
+.is-focus {
+    .el-checkbox__inner {
+        border-color: #77C2DB;
+    }
+}

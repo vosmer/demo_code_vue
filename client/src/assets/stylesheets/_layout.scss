@@ -1,0 +1,305 @@
+/**
+ * Created by Vosmer on 08.01.2017. specially for dear HWD
+ */
+html, body, .application {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font: $fontDefaultLight;
+}
+body {
+    font: $fontDefaultLight;
+    color: $fontColor;
+}
+
+a,button,input[type='button'],input[type='submit'] {
+    outline: none;
+    cursor: pointer;
+    &:hover,&:focus {
+        outline: none;
+    }
+}
+.application {
+    .main-layout {
+        height: 100%;
+        .header {
+            background: transparent;
+        }
+        .bcg {
+            position: fixed;
+            z-index: -100;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #5EA8B4;
+            overflow: hidden;
+            .gradient {
+                position: absolute;
+                z-index: -99;
+                top: -50%;
+                left: -50%;
+                background-image: radial-gradient( #ddf6fb,#ddf6fb, #E8F2FB,#E8F2FB);
+                background-position: 0 0;
+                background: #ddf6fb;
+                height: 200%;
+                width: 150%;
+            }
+        }
+    }
+}
+//standatrtize inline flex layout
+.flex-row {
+    display: flex;
+    display: table-row\0/IE9;
+    width: 100%\0/IE9;
+    .flex-row-column {
+        flex: 1;
+        display: inline-block\0/IE9;
+        vertical-align: top\0/IE9;
+        &.rest {
+            flex: -1 1 auto;
+        }
+        &.by-content {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: auto;
+            margin-right: 5px;
+        }
+    }
+    &.wrapping {
+        flex-wrap: wrap;
+        .flex-row {
+            .flex-row-column {
+
+            }
+        }
+    }
+}
+.flex-aligner {
+    display: flex;
+    align-items: center;
+    display: block\0/IE9;
+    &.horizontal {
+        justify-content: center;
+    }
+    .flex-aligner-item {
+        display: inline-block;
+        &.start {
+            align-self: flex-start;
+        }
+        &.end {
+            align-self: flex-end;
+        }
+    }
+    &.wrapping {
+        flex-wrap: wrap;
+    }
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+    height: 100%;
+    display: inline-block\0/IE9;
+    vertical-align: top;
+    &>.flex-column-cell {
+        &.rest {
+            flex: 2;
+        }
+        &.by-content {
+
+        }
+    }
+}
+div.bg {
+    height: auto!important;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    @include borderRadius(4px);
+    border: 1px solid #666666;
+    box-sizing: border-box;
+    @media only screen and (max-width: 450px) and (max-height: 550px) {
+        position: fixed;
+    }
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+    .filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b1464+0,0070b4+100&0.7+0,0.7+100 */
+        background: -moz-linear-gradient(-45deg, rgba(27,20,100,0.7) 0%, rgba(0,112,180,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(27,20,100,0.7) 0%,rgba(0,112,180,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(27,20,100,0.7) 0%,rgba(0,112,180,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b31b1464', endColorstr='#b30070b4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+}
+
+//holy grail
+.flex-holy-grail {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: visible;
+    padding: 0;
+    .flex-holy-grail-header {
+        flex: 0 0 1px;
+    }
+    .flex-holy-grail-section {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: row;
+        .flex-holy-grail-article {
+            flex: 1 1 1px;//donkey thinks initial width 0 or auto gives tables right to shrink far-far-away. Pure pure donkey
+        }
+        .flex-holy-grail-nav {
+            flex: 0 0 200px;
+            order: -1;
+        }
+        .flex-holy-grail-aside {
+            flex: 0 0 200px;
+        }
+    }
+    .flex-holy-grail-footer {
+        flex: 0 0 100px;
+    }
+}
+
+.clearfix {
+    clear: both;
+    zoom: 1;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.flex-sticky-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* needed for proper layout */
+    &>.sticky-header,&>.sticky-footer {
+        flex: 0 0 auto;
+    }
+    &>.scrolling-content {
+        flex: 1 1 auto;
+        position: relative;/* need this to position inner content */
+        overflow-y: auto;
+    }
+}
+.sticky-layout {
+    display: block;
+    position: relative;
+    height: 100%; /* needed for proper layout */
+    overflow-y: hidden;
+    &>.sticky-header,&>.sticky-footer {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    &>.scrolling-content {
+        position: absolute;/* need this to position inner content */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow-y: auto;
+
+    }
+}
+
+.ribbon-section {
+    position: relative;
+    &>.bcg {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-color: transparent;
+    }
+    &>.center-column {
+        position: relative;
+        width: $defaultRibbonWidth;
+        @media (max-width: $defaultRibbonWidth) {
+            width: 100%;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.inline-group {
+    display: table-row;
+    position: relative;
+    .inline-group-item {
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+.box-inline-group {
+    white-space: nowrap;
+}
+.box-inline {
+    display: inline-block;
+    vertical-align: top;
+}
+.el-aside.flex-column {
+    width: 200px;
+}
+.el-container.flex-column  {
+    width: calc(100% - 200px);
+}
+.layout-404 {
+    text-align: center;
+    font-size: 18px;
+    .error {
+        &-text {
+            font-weight: bold;
+            font-size: 72px;
+            margin: 50px 0px;
+        }
+        &-description {
+            font-size: 30px;
+            margin: 20px 0px 40px;
+        }
+    }
+    .buttons {
+        .button-wrapper {
+            display: inline-block;
+            vertical-align: top;
+            margin: 30px 10px;
+            cursor: pointer;
+            color: black;
+            font-size: 30px;
+            &:hover {
+                color: #555;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.footer {
+    background: #eeeeee;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    font: $fontDefaultSemiBold;
+    padding: 15px;
+    .horizontal-divider {
+        width: 20px;
+    }
+    .book-open-icon {
+        font-size: 20px;
+        svg {
+            fill: black;
+        }
+    }
+}

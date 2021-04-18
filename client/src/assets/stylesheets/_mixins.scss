@@ -1,0 +1,195 @@
+/**
+ * Created by Vosmer on 08.01.2017. specially for dear HWD
+ */
+@mixin noselect() {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}//@include noselect();
+@mixin transition($css: 'all', $time: '0.3s', $timeDelay: 0s) {
+    -webkit-transition: $css $time ease-out $timeDelay;
+    -moz-transition: $css $time ease-out $timeDelay;
+    -o-transition: $css $time ease-out $timeDelay;
+    transition: $css $time ease-out $timeDelay;
+}//@include transition(top, 0.3s, 0s);
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}//@include borderRadius(3px);
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        -o-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        -o-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}//@include box-shadow(2px, 2px, 2px, #000000, false);
+@mixin clear-box-shadow() {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}//@include clear-box-shadow();
+@mixin rotate($deg: '-90deg') {
+    /* Safari */
+    -webkit-transform: rotate($deg);
+    /* Firefox */
+    -moz-transform: rotate($deg);
+    /* IE */
+    -ms-transform: rotate($deg);
+    /* Opera */
+    -o-transform: rotate($deg);
+    /* Internet Explorer */
+    //filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+@keyframes roll {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+//animation: roll 1.5s infinite linear;
+//transform: rotate(360deg);
+
+@function unitless($num) {
+    @return ($num / ($num * 0 + 1));
+}
+
+@mixin tooltipPosition($pos: 'tl') {
+    @if $pos == tl {
+        top: auto;
+        bottom: 100%;
+        left: auto;
+        right: 0;
+        &>.decor {
+            &:before, &:after {
+                content: '▼';
+                top: 100%;
+                bottom: auto;
+                left: 0;
+                right: auto;
+                margin-top: -1px;
+                margin-bottom: auto;
+            }
+        }
+    } @else if $pos == tr {
+        top: auto;
+        bottom: 100%;
+        left: auto;
+        right: 0;
+        &>.decor {
+            &:before, &:after {
+                content: '▼';
+                top: 100%;
+                bottom: auto;
+                left: auto;
+                right: 0px;
+                margin-top: -1px;
+                margin-bottom: auto;
+            }
+        }
+    } @else if $pos == br {
+        top: 100%;
+        bottom: auto;
+        left: 0;
+        right: auto;
+        &>.decor {
+            &:before, &:after {
+                content: '▲';
+                top: auto;
+                bottom: 100%;
+                left: 0;
+                right: auto;
+                margin-top: auto;
+                margin-bottom: -1px;
+            }
+        }
+    } @else if $pos == bl {
+        top: 100%;
+        bottom: auto;
+        left: auto;
+        right: 0;
+        &>.decor {
+            &:before, &:after {
+                content: '▲';
+                top: auto;
+                bottom: 100%;
+                left: auto;
+                right: 0px;
+                margin-top: auto;
+                margin-bottom: -1px;
+            }
+        }
+    } @else {
+
+    }
+}
+
+@mixin needTriangle ($colour:'#000000', $direction:'r', $width:'20px', $height:'0', $top:'10px', $right:'0', $bottom:'10px', $left:'0') {
+    $filterColour: #000000;
+    @if (lightness($colour) > 50) {
+        $filterColour: #000000; // Lighter backgorund, return dark color
+    } @else {
+        $filterColour: #ffffff; // Darker background, return light color
+    }
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    line-height: 0px;
+
+    @if $direction == tl {
+
+    } @else if $direction == t {
+
+    } @else if $direction == tr {
+        border-width: 0 $width $height 0;
+        border-color: transparent $colour transparent transparent;
+        _border-color: $filterColour $colour $filterColour $filterColour;
+        //@include needTriangle(#000000,tr,2px,7px);
+    } @else if $direction == r {
+        border-width: $top 0 $bottom $width;
+        border-color: transparent transparent transparent $colour;
+        _border-color: $filterColour $filterColour $filterColour $colour;
+        //@include needTriangle(#000000,r,15,0,6.5px,0,6.5px,0);
+    } @else if $direction == br {
+        border-width: 0 0 $height $width;
+        border-color: transparent transparent $colour transparent;
+        _border-color: $filterColour $filterColour $colour $filterColour;
+        //@include needTriangle(#000000,br,2px,7px);
+    } @else {
+
+    }
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='$filterColour');
+}//@include needTriangle(#000000,r,15,0,6.5px,0,6.5px,0);
+
+// keyframes mixin
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name}{
+        @content;
+    }
+    @-moz-keyframes #{$name}{
+        @content;
+    }
+    @-o-keyframes #{$name}{
+        @content;
+    }
+    @keyframes #{$name}{
+        @content;
+    }
+} // @include keyframes(bgcolor) { bodyofkeyframe }

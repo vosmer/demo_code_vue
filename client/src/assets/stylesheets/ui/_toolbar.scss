@@ -1,0 +1,12 @@
+.toolbar {
+    &-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px 10px 15px 10px;
+        background: rgba(50, 180, 200, 0.5);
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

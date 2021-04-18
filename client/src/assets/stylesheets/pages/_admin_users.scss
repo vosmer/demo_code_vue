@@ -1,0 +1,46 @@
+.page-admin-users {
+    .ui-actions {
+        .el-button {
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 5px;
+        }
+    }
+    .el-col-6 {
+        min-width: 190px;
+    }
+    > .warning {
+        background: #FFFFAE;
+        padding: 5px;
+        margin: 5px 0px;
+        color: #AA1319;
+    }
+    .ui-actions {
+        margin-bottom: 10px;
+    }
+    .submenu {
+        margin-top: 10px;
+    }
+    .organization-settings {
+        .is-changed {
+            .el-checkbox__label {
+                background: #FFFFAE;
+            }
+            &>input {
+                background: #FFFFAE;
+            }
+        }
+        .el-form-item {
+            .el-form-item__label {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+            .el-form-item__content {
+            }
+        }
+        .el-select {
+            width: 100%;
+        }
+    }
+}

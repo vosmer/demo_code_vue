@@ -1,0 +1,41 @@
+.page-admin-roles {
+    .ui-actions {
+        .el-button {
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 5px;
+        }
+    }
+    .total-stats {
+        .stats-line {
+            margin-top: 10px;
+            padding-left: 10px;
+            .value {
+                font-weight: bold;
+            }
+        }
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    h1 {
+        margin: 10px;
+    }
+    h4 {
+        margin: 10px;
+    }
+    .bcgSvg {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        .svg-pattern .pattern-text-path {
+            font-size: 10px;
+            stroke: teal;
+            stroke-opacity: 0.1;
+            fill-opacity: 0.1;
+        }
+    }
+}

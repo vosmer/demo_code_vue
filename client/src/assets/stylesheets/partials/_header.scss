@@ -1,0 +1,137 @@
+.header {
+    background: url('../images/logo.jpg') no-repeat -1px 0 transparent;
+    background: #eeeeee;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    font: $fontDefaultSemiBold;
+    padding: 15px 15px 0px 15px;
+}
+.top-menu-container {
+    position: relative;
+    padding-right: 115px;
+    background: rgba(0, 150, 200, 0.5);
+    .buttons-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 10px;
+        padding-right: 10px;
+        .button-wrapper {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            & > .material-design-icon {
+                display: inline-block;
+            }
+            &:hover {
+                color: #666666;
+            }
+        }
+    }
+}
+.top-menu-hidden {
+    height: 0px;
+    overflow: hidden;
+    position: fixed;
+    top:0px;
+    width: calc(100% - 145px);
+    z-index: 1000;
+    background: #7fcae3;
+    border-bottom: 5px solid #7fcae3;
+    &:hover {
+        height: auto;
+        border: 0;
+        overflow: unset;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+.menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    &.collapsed {
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+    .menu-item {
+        font: $fontDefaultLight;
+        display: inline-block;
+        padding: 0 20px;
+        line-height: 50px;
+        border-radius: 0;
+        color: #ffffff;
+        text-shadow: none;
+        font-size: 22px;
+        margin-right: 10px;
+        box-sizing: border-box;
+        vertical-align: top;
+        cursor: pointer;
+        text-decoration: none;
+        &.active,
+        &:hover {
+            line-height: 46px;
+            border: 2px solid rgba(0, 150, 200, 0.5);
+            background-color: rgba(0, 150, 200, 0.5);
+            padding: 0 18px;
+        }
+        &.active {
+            cursor: default;
+        }
+    }
+    .sub-menu {
+        position: absolute;
+        display: inline-block;
+        background-color: white;
+        top: 100%;
+        left: 0;
+        padding: 10px;
+        border: 1px solid rgba(0, 150, 200, 1);
+        z-index: 100000;
+        .el-button {
+            font-size: 18px;
+            display: block;
+            margin-left: 0;
+            margin-top: 10px;
+            &:first-child, &.top-button {
+                margin-top: 0;
+            }
+        }
+    }
+}
+.help-button,
+.feedback-button {
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    .el-badge__content.is-fixed {
+        top: 3px;
+        border: none;
+    }
+    & > .material-design-icon {
+        display: inline-block;
+    }
+    &:hover {
+        color: #666666;
+    }
+    &-wrapper {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+.feedback-button {
+    &-wrapper {
+        margin-right: 0;
+    }
+}

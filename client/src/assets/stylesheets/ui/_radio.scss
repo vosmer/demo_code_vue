@@ -1,0 +1,49 @@
+.el-radio {
+    padding: 5px 0;
+    .el-radio__input.is-checked+.el-radio__label {
+        color: black;
+        font-weight: bold;
+    }
+    .el-radio__input.is-checked .el-radio__inner {
+        color: #77C2DB;
+        border-color: #77C2DB;
+        background: #77C2DB;
+    }
+    .el-checkbox {
+        padding: 5px 0;
+    }
+    &-group {
+        margin: 0 0 20px 0;
+        .el-radio-button__inner {
+            border-radius: 0px;
+            font-size: 22px;
+            padding: 5px 20px;
+            border-color: #dcdfe6;
+            &:hover, &:focus {
+                color: #333333;
+                border-color: #409EFF;
+            }
+        }
+        .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+            color: #ffffff;
+            background-color: #77C2DB;
+            border-radius: 0px;
+            font-size: 22px;
+            padding: 5px 20px;
+            &:hover, &:focus {
+                color: #ffffff;
+                border-color: #dcdfe6;
+            }
+        }
+    }
+}
+.radio-group {
+    &.vertical {
+        vertical-align: top;
+        .line {
+            display: block;
+            vertical-align: top;
+        }
+    }
+
+}

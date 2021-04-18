@@ -1,0 +1,274 @@
+.personal-area {
+    .el-button {
+        margin-top: 20px;
+    }
+    .field {
+        margin-bottom: 20px;
+        &-label {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+    }
+    .el-transfer {
+        &__button {
+            margin: 0 0 20px;
+        }
+        &-panel {
+            overflow: auto;
+        }
+    }
+    .transfer-panel__item {
+        padding: 2px 0;
+        .el-checkbox {
+            vertical-align: middle;
+        }
+        .material-design-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .el-transfer-panel__body {
+        padding: 5px;
+    }
+}
+.personal-settings {
+    .item-btn {
+        display: flex;
+        justify-content: center;
+    }
+    .field {
+        margin-bottom: 10px;
+        margin-left: 20px;
+        &.btn {
+            font-size: 16px;
+            line-height: 24px;
+            cursor: pointer;
+            &.feedback-btn {
+                text-decoration: underline;
+            }
+            .material-design-icon {
+                font-size: 22px;
+                vertical-align: top;
+                margin-right: 6px;
+            }
+        }
+        &.timezone {
+            margin-top: 10px;
+            line-height: 30px;
+            .el-select {
+                vertical-align: top;
+                margin-left: 10px;
+            }
+        }
+        &.caption {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px;
+        }
+        .blue-link {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .el-button {
+            margin-top: 10px;
+        }
+    }
+    .change-password {
+        margin: 30px 0px;
+        .field {
+            line-height: 30px;
+            margin-bottom: 10px;
+            .field-name {
+                width: 150px;
+                display: inline-block;
+            }
+            .el-input {
+                margin-left: 15px;
+                display: inline-block;
+                vertical-align: top;
+                width:300px;
+            }
+        }
+        .validation {
+            color: red;
+            margin: 20px;
+            line-height: 150%;
+        }
+    }
+}
+
+.alert-system {
+    hr {
+        margin-bottom: 10px;
+    }
+    .el-select {
+        display: block;
+    }
+    .el-tag__close {
+        display: none;
+    }
+    &-title {
+        padding-left: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .el-input-number {
+        width: 100px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .field {
+        margin-bottom: 10px;
+        &-connected {
+            margin-bottom: 10px;
+        }
+        &-left-part,
+        &-right-part,
+        &-list {
+            display: inline-block;
+            vertical-align: top;
+        }
+        &-list {
+            &-title {
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+        }
+        &-left-part {
+            width: 300px;
+            white-space: normal;
+            padding: 0 10px 0 0;
+            .el-checkbox__label {
+                white-space: normal;
+                vertical-align: top;
+            }
+        }
+        &-right-part {
+            margin-right: 10px;
+            &-label {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+.notification-settings {
+    .field {
+        margin: 10px 0;
+    }
+}
+.modal-zvk-columns-settings {
+    .el-dialog {
+        width: 700px;
+        @media (max-width: 700px) {
+            width: 100%;
+        }
+    }
+    .columns-settings {
+        max-height: 50vh;
+        overflow: auto;
+        &-table {
+            width: calc(100% - 17px);
+            .label-column, .input-column, .checkbox-column {
+                padding: 2px 5px;
+                text-align: center;
+            }
+            .label-column {
+                text-align: left;
+                width: 40%;
+            }
+            .input-column {
+                width: 30%;
+                .el-input-number {
+                    width: 140px;
+                }
+            }
+            .checkbox-column {
+                width: 20%;
+            }
+            .arrows-column {
+                width: 10%;
+                .material-design-icon {
+                    cursor: pointer;
+                }
+            }
+        }
+        & .columns-settings-table {
+            width: 100%;
+            .columns-settings-row {
+                &:hover {
+                    .label-column {
+                        background: #52BFD122;
+                    }
+                }
+                &.is-changed {
+                    .label-column {
+                        background: #FFFFAE;
+                    }
+                }
+            }
+        }
+    }
+}
+.modal-columns-settings {
+    .el-dialog {
+        width: 600px;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+    }
+    .columns-settings {
+        max-height: 50vh;
+        overflow: auto;
+        &-table {
+            width: calc(100% - 17px);
+            .label-column, .input-column, .checkbox-column {
+                padding: 2px 5px;
+                text-align: center;
+            }
+            .label-column {
+                text-align: left;
+                width: 50%;
+            }
+            .input-column {
+                width: 30%;
+                .el-input-number {
+                    width: 140px;
+                }
+            }
+            .checkbox-column {
+                width: 20%;
+            }
+        }
+        & .columns-settings-table {
+            width: 100%;
+            .columns-settings-row {
+                &:hover {
+                    .label-column {
+                        background: #52BFD122;
+                    }
+                }
+                &.is-changed {
+                    .label-column {
+                        background: #FFFFAE;
+                    }
+                }
+            }
+        }
+    }
+}
+.notification-list {
+    .notification-type {
+        text-align: center;
+    }
+    .notification-info {
+        background: white;
+    }
+    .notification-warning {
+        background: rgb(255, 255, 208);
+    }
+    .notification-error {
+        background: rgb(255, 208, 208);
+    }
+}

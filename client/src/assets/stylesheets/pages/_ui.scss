@@ -1,0 +1,73 @@
+.test-add-request-button {
+    .btn {
+        display: inline-block;
+        cursor: pointer;
+        background: rgba(0, 150, 200, 0.5);
+        .btn-text {
+            vertical-align: top;
+            font: $fontDefaultLight;
+            color: white;
+        }
+    }
+}
+.spinner {
+    margin: 20px 0;
+    .spinner-text {
+        position: relative;
+        color: #333333;
+        z-index: 3;
+    }
+    &.spinner-inline {
+        $spinnerInlineHeight: 30px;
+        position: relative;
+        width: $spinnerInlineHeight;
+        height: $spinnerInlineHeight;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px;
+        .el-loading-spinner {
+            margin: 0;
+            .circular {
+                height: $spinnerInlineHeight;
+                width: $spinnerInlineHeight;
+            }
+        }
+    }
+    .el-loading-spinner {
+        position: relative;
+    }
+    .el-loading-mask {
+        position: relative;
+        background-color: transparent;
+    }
+}
+xmp.json {
+    display: inline-block;
+    width: 40%;
+    overflow: scroll;
+    height: 400px;
+    vertical-align: top;
+    line-height: 12px;
+    &.hidden {
+        display: none;
+    }
+}
+xmp.xml {
+    display: inline-block;
+    width: 100%;
+    overflow: auto;
+    height: 300px;
+    vertical-align: top;
+    line-height: 12px;
+    &.xmlMessage {
+        height: 500px;
+    }
+    &.errorMessage {
+        height: 60px;
+        padding: 5px;
+        white-space: normal;
+    }
+    &.hidden {
+        display: none;
+    }
+}

@@ -1,0 +1,78 @@
+$modalWindowHeaderBG: #52BFD1;
+$modalWindowHeaderTitleColor: white;
+$modalWindowHeaderBtnsTop: 14px;
+$modalWindowHeaderBtnColor: white;
+$modalWindowHeaderBtnHoverColor: #666;
+
+$blueHyperlinkColor: #0a7ea5;
+$blueHyperlinkHoverColor: #50c2e8;
+
+$greenHyperlinkColor: #08ad62;
+$greenHyperlinkHoverColor: #11ce78;
+
+$inputBorderColor: #cbcbcb;
+$inputBorder: 1px solid $inputBorderColor;
+
+//vendors
+@import "../../../node_modules/element-ui/lib/theme-chalk/index.css";
+//https://gitlab.com/robcresswell/vue-material-design-icons
+@import "../../../node_modules/vue-material-design-icons/styles.css";
+@import "../../../node_modules/highlight.js/styles/github.css";
+
+//main
+@import "_reset";
+@import "_config";
+@import "_mixins";
+@import "_layout";
+
+//fonts
+@import "fonts/_font_ubuntu";
+//partials
+@import "partials/_header";
+@import "partials/_footer";
+@import "partials/_requests";
+@import "partials/_user-guide";
+@import "partials/_divisions_and_users";
+@import "partials/_roles_list";
+@import "partials/_control_panel";
+@import "partials/_filters";
+@import "partials/_state_row";
+@import "partials/_gantt_chart";
+@import "partials/_admin_calendar";
+@import "partials/_pagination";
+
+//ui
+@import "ui/_hyperlinks";
+@import "ui/_tables";
+@import "ui/_headlines";
+@import "ui/_input";
+@import "ui/_checkbox";
+@import "ui/_buttons";
+@import "ui/_tip";
+@import "ui/_tooltips";
+@import "ui/_menues";
+@import "ui/_main-tabs";
+@import "ui/_pagination";
+@import "ui/_modals";
+@import "ui/_toolbar";
+@import "ui/_trees";
+@import "ui/_checkboxes";
+@import "ui/_date_time_input";
+@import "ui/_select";
+@import "ui/_radio";
+@import "ui/_switch";
+@import "ui/_time_picker";
+@import "ui/_create_step";
+@import "ui/_spoilers";
+
+
+//pages
+@import "pages/_admin_roles";
+@import "pages/_admin_users";
+@import "pages/_admin_settings";
+@import "pages/_admin_registers";
+
+@import "pages/_feedback";
+@import "pages/_ui";
+@import "pages/_authorization";
+@import "pages/_personal_area";
